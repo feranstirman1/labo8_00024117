@@ -86,6 +86,11 @@ const mostrar = ()=>{
 
 var validarFormulario = (formulario) => {
     var flag = true;
+
+    if(formulario[3].value<0){
+        formulario[3].value=0;
+    }
+
     for (let i= 1; i < formulario.length; i++){
         if (formulario[i].value == "" || formulario[i].value == null){
             formulario[i].style.borderColor = "red";
